@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro - EcoPuntos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="d-flex align-items-center justify-content-center p-3" style="min-height: 100vh; background-color: #f0f2f5;">
+
+  <div class="w-100" style="max-width: 450px;">
+    
+    <a href="index.html" class="text-success text-decoration-none fw-bold mb-3 d-inline-block">
+      <span class="fs-5">←</span> Volver al inicio
+    </a>
+
+    <div class="tarjeta">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold text-success">Crear cuenta</h2>
+        <p class="text-muted">Usa tu correo del CBTA</p>
+      </div>
+
+      <form onsubmit="registrar(event)">
+        <div class="mb-3">
+          <label class="form-label">Nombre completo</label>
+          <input type="text" class="form-control" id="nombre" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Correo institucional</label>
+          <input type="email" class="form-control" id="correo" placeholder="alumno@cbta197.net" required>
+          <small class="text-muted">Debe terminar en @cbta197.net</small>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Grupo</label>
+          <select class="form-select" id="grupo" required>
+            <option value="">Selecciona tu grupo</option>
+            <option>1°A</option>
+            <option>1°B</option>
+            <option>1°C</option>
+            <option>1°D</option>
+            <option>1°E</option>
+            <option>1°F</option>
+            <option>1°G</option>
+            <option>1°H</option>
+            <option>1°I</option>
+            <option>1°J</option>
+            <option>1°K</option>
+            <option>3°ATAE</option>
+            <option>3°ATAP</option>
+            <option>3°ATB</option>
+            <option>3°ATP</option>
+            <option>3°ATPIA</option>
+            <option>3°BTAE</option>
+            <option>3°BTAP</option>
+            <option>3°BTB</option>
+            <option>3°BTPIA</option>
+            <option>3°CTAE</option>
+            <option>3°CTAP</option>
+            <option>5°ATAE</option>
+            <option>5°ATAP</option>
+            <option>5°ATB</option>
+            <option>5°ATP</option>
+            <option>5°ATPIA</option>
+            <option>5°BTAE</option>
+            <option>5°BTAP</option>
+            <option>5°BTB</option>
+            <option>5°BTPIA</option>
+            <option>5°CTAE</option>
+            <option>5°CTAP</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="pass1" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Confirmar contraseña</label>
+          <input type="password" class="form-control" id="pass2" required>
+        </div>
+
+        <button type="submit" class="btn boton-verde w-100">Registrarse</button>
+      </form>
+
+      <p class="text-center mt-3 mb-0">
+        ¿Ya tienes cuenta? <a href="login.html" class="text-success fw-bold text-decoration-none">Inicia sesión</a>
+      </p>
+    </div>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

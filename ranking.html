@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ranking - EcoPuntos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <div class="menu-lateral">
+    <h2>EcoPuntos</h2>
+    <a href="perfil.html">Mi Perfil</a>
+    <a href="ranking.html" class="activo">Ranking</a>
+    <a href="tienda.html">Tienda</a>
+    <a href="#" onclick="cerrarSesion()" class="mt-auto text-warning mt-md-auto mt-2">Cerrar Sesión</a>
+  </div>
+
+  <div class="contenido-principal">
+    <h2 class="fw-bold mb-4">Ranking del Plantel</h2>
+
+    <div class="tarjeta text-center p-5" id="mensajeBloqueo" style="display: none;">
+      <h1 class="text-success display-1">🔒</h1>
+      <h3 class="fw-bold mt-3">Debes iniciar sesión</h3>
+      <p class="text-muted mb-4">Para poder ver tu posición y los puntos de tu grupo, primero ingresa a tu cuenta o regístrate.</p>
+      <a href="login.html" class="btn boton-verde px-4 py-2 me-2">Iniciar Sesión</a>
+      <a href="registro.html" class="btn btn-outline-success px-4 py-2">Registrarse</a>
+    </div>
+
+    <div id="contenedorRanking">
+      
+      <div class="podio">
+        <div class="podio-item podio-2">
+          <h6 class="text-muted">2° Lugar</h6>
+          <h5 class="fw-bold m-0">Luis M.</h5>
+          <small class="text-success">1100 pts</small>
+        </div>
+        <div class="podio-item podio-1">
+          <h6 class="text-muted">1° Lugar</h6>
+          <h5 class="fw-bold m-0">Ana L.</h5>
+          <small class="text-success">1250 pts</small>
+        </div>
+        <div class="podio-item podio-3">
+          <h6 class="text-muted">3° Lugar</h6>
+          <h5 class="fw-bold m-0">María T.</h5>
+          <small class="text-success">950 pts</small>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-8">
+          <div class="tarjeta">
+            <div class="table-responsive">
+              <table class="table table-hover tabla-ranking text-center">
+                <thead>
+                  <tr>
+                    <th>Lugar</th>
+                    <th>Alumno</th>
+                    <th>Grupo</th>
+                    <th>Puntos</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>4°</td><td>Pedro Ramírez</td><td>5°B</td><td>800</td></tr>
+                  <tr><td>5°</td><td>Laura Gómez</td><td>3°A</td><td>780</td></tr>
+                  <tr><td>6°</td><td>Jorge Díaz</td><td>1°B</td><td>750</td></tr>
+                  <tr><td>7°</td><td>Sofía Castro</td><td>5°ATP</td><td>720</td></tr>
+                  <tr><td>8°</td><td>Diego Flores</td><td>3°B</td><td>700</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="text-center mt-2">
+              <button class="btn btn-outline-success btn-sm w-100 w-md-auto">Ver más lugares</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="tarjeta" id="panelMiPosicion" style="display: none; border-left: 5px solid #43a047;">
+            <h6 class="text-muted fw-bold">TU POSICIÓN ACTUAL</h6>
+            <div class="d-flex align-items-center mt-2">
+              <h1 class="display-4 fw-bold text-success m-0 me-3" id="miPosicionNum">--</h1>
+              <div>
+                <p class="fw-bold m-0" id="miNombre">--</p>
+                <small class="text-muted" id="miPuntos">-- pts</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="js/script.js"></script>
+  <script>
+    controlarVistaRanking();
+  </script>
+</body>
+</html>
